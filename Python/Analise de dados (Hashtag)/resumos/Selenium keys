@@ -1,0 +1,80 @@
+Certamente! Abaixo estão alguns códigos comumente usados para a automação web com Selenium em Python. Estes exemplos incluem interações com elementos da página, esperas, manipulação de janelas, e seleção de elementos.
+
+### 1. Localizar elementos na página:
+
+#### Por ID:
+```python
+element = driver.find_element_by_id("element_id")
+```
+
+#### Por Nome:
+```python
+element = driver.find_element_by_name("element_name")
+```
+
+#### Por Classe:
+```python
+element = driver.find_element_by_class_name("element_class")
+```
+
+#### Por XPath:
+```python
+element = driver.find_element_by_xpath("//path/to/element")
+```
+
+#### Por CSS Selector:
+```python
+element = driver.find_element_by_css_selector("css_selector")
+```
+
+### 2. Interagir com elementos:
+
+#### Digitar texto em um campo de entrada:
+```python
+element.send_keys("Texto de exemplo")
+```
+
+#### Clicar em um botão:
+```python
+element.click()
+```
+
+#### Limpar um campo de entrada:
+```python
+element.clear()
+```
+
+### 3. Esperas:
+
+#### Espera implícita:
+```python
+driver.implicitly_wait(10)  # Espera por até 10 segundos antes de lançar uma exceção ao tentar encontrar elementos.
+```
+
+#### Espera explícita:
+```python
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
+
+element = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "element_id")))
+```
+
+### 4. Manipulação de janelas e guias:
+
+#### Alternar para outra janela ou guia:
+```python
+window_handles = driver.window_handles
+driver.switch_to.window(window_handles[1])  # Alterna para a segunda janela ou guia.
+```
+
+### 5. Manipulação de frames:
+
+#### Alternar para um frame pelo índice ou nome:
+```python
+driver.switch_to.frame(0)  # Alterna para o primeiro frame.
+# Ou
+driver.switch_to.frame("frame_name")  # Alterna para um frame pelo nome.
+```
+
+Estes são apenas alguns exemplos básicos. A automação web pode envolver tarefas mais complexas, como manipulação de listas, seleção de opções em dropdowns, manipulação de cookies, etc. Consulte a documentação oficial do Selenium (https://www.selenium.dev/documentation/en/) para obter informações detalhadas sobre todas as funcionalidades disponíveis.

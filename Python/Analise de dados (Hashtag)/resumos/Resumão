@@ -1,0 +1,56 @@
+
+### Instalação do Selenium:
+```bash
+pip install selenium
+```
+
+### Escolha do Navegador:
+Você precisará do driver correspondente ao navegador que deseja automatizar. Por exemplo, para o Chrome, você precisará do ChromeDriver (https://sites.google.com/chromium.org/driver/). Certifique-se de baixar a versão compatível com o seu navegador.
+
+### Exemplo Básico de Automação com o Selenium:
+Vamos criar um script simples que abre o navegador, acessa o Google, faz uma pesquisa e imprime os resultados.
+
+```python
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+
+# Caminho para o seu driver, substitua pelo caminho correto
+driver_path = "/caminho/para/o/seu/driver/chromedriver"
+
+# Inicializar o navegador
+driver = webdriver.Chrome(executable_path=driver_path)
+
+# Abrir o Google
+driver.get("https://www.google.com")
+
+# Encontrar o campo de pesquisa e digitar algo
+search_box = driver.find_element("name", "q")
+search_box.send_keys("Automacao com Selenium")
+
+# Pressionar Enter para realizar a pesquisa
+search_box.send_keys(Keys.RETURN)
+
+# Esperar um pouco para os resultados carregarem
+driver.implicitly_wait(5)
+
+# Imprimir o título da página e a URL
+print("Título da Página:", driver.title)
+print("URL Atual:", driver.current_url)
+
+# Fechar o navegador
+driver.quit()
+```
+
+Lembre-se de substituir `"/caminho/para/o/seu/driver/chromedriver"` pelo caminho correto do seu driver.
+
+### Entendendo o Script:
+1. Importamos as bibliotecas necessárias do Selenium.
+2. Inicializamos o navegador usando `webdriver.Chrome()`.
+3. Abrimos o Google usando `driver.get("https://www.google.com")`.
+4. Encontramos o campo de pesquisa pelo nome e enviamos a consulta.
+5. Pressionamos a tecla Enter para realizar a pesquisa.
+6. Esperamos um pouco para os resultados carregarem usando `driver.implicitly_wait()`.
+7. Imprimimos o título da página e a URL atual.
+8. Finalmente, fechamos o navegador com `driver.quit()`.
+
+Esta é apenas uma introdução básica. Você pode explorar mais funcionalidades do Selenium, como clicar em botões, preencher formulários, manipular elementos da página e muito mais. Consulte a documentação oficial do Selenium para obter informações mais detalhadas: https://www.selenium.dev/documentation/en/

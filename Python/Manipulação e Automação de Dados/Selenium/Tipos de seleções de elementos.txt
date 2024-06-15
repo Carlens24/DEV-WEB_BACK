@@ -1,0 +1,32 @@
+Tipos de Seleção de elementos na pagína web: 
+
+01 -- Seleção - basìco
+forma00 = element = driver.find_element_by_id("element_id")
+ou 
+element = driver.find_element_by_CLASS_NAME("class_element")
+entre muitos outros
+
+
+
+02 -- XPATHs
+XPATH especifico (Recomendado): "//input[@type='search']"
+
+XPATH génerico: //*[@id="contact_form"]/fieldset/div[6]
+
+
+
+03 -- Tags sem elementos
+opção 01 - selecionar pelo numero especifico: //option[6]
+
+opção 02 - Selecionar elemento direto pelo nome que tá dentro da tag (recomendado): //option[contains(text, "California")]
+
+
+
+04 -- css selectors
+css selector02 especifico: //div[@style='background-solor:pink']
+Um unico elemento que possuí esse estilo no seu css
+
+ - css selector02: //*[@style='background-solor:pink']
+todos os elementos com esse mesmo estilo no seu css
+
+

@@ -1,0 +1,50 @@
+### Pandas
+1. Limpeza e Transformação de Dados Dado um arquivo CSV contendo dados de transações de clientes (com valores ausentes, tipos de dados incorretos e outliers), limpe e transforme os dados usando Pandas. Garanta que todos os valores ausentes sejam tratados adequadamente, os tipos de dados sejam corrigidos e os outliers sejam identificados e tratados.
+
+2. Análise de Dados Usando um conjunto de dados sobre preços de ações (arquivo CSV), calcule a média móvel, os retornos diários e visualize as tendências dos preços de fechamento ao longo do tempo. Além disso, encontre os 5 dias com os maiores volumes de negociação.
+
+### Regex
+3. Extração de Texto Escreva um script Python usando regex para extrair todos os endereços de e-mail, números de telefone e datas de um arquivo de texto fornecido. Certifique-se de que os padrões sejam flexíveis o suficiente para lidar com vários formatos.
+
+4. Correspondência de Padrões Dada uma lista de URLs, use regex para extrair e categorizar com base no nome do domínio (por exemplo, extrair todas as URLs pertencentes a exemplo.com e exemplo.org).
+
+### Requests
+5. Interação com API Use o módulo Requests para interagir com uma API pública (por exemplo, API OpenWeatherMap). Obtenha os dados meteorológicos atuais para uma cidade fornecida e exiba os resultados em um formato amigável ao usuário.
+
+6. Download de Conteúdo de Página Web Escreva um script que use Requests para baixar o conteúdo HTML de uma lista de páginas web fornecidas em um arquivo de texto. Salve o conteúdo de cada página em arquivos HTML separados.
+
+### BeautifulSoup (bs4)
+7. Raspagem de Dados da Web Raspe os títulos, autores e datas de publicação dos artigos mais recentes de um site de notícias. Armazene os dados em um DataFrame do Pandas e salve-os em um arquivo CSV.
+
+8. Extração de Dados de HTML Dado um arquivo HTML contendo uma tabela de dados, use BeautifulSoup para extrair o conteúdo da tabela e convertê-lo em um DataFrame do Pandas. Garanta que o DataFrame tenha nomes de colunas e tipos de dados apropriados.
+
+### Selenium
+9. Envio Automatizado de Formulário Use Selenium para automatizar o processo de preenchimento e envio de um formulário web. Garanta que o script espere os elementos serem interagíveis e lide com qualquer pop-up ou alerta que apareça.
+
+10. Raspagem de Conteúdo Dinâmico Escreva um script Selenium para raspar dados de um site que carrega conteúdo dinamicamente via JavaScript (por exemplo, página com rolagem infinita). Certifique-se de que todo o conteúdo seja carregado e extraído corretamente.
+
+### Robot Framework com Selenium
+11. Automação de Teste de UI Usando Robot Framework com Selenium, crie uma suíte de testes que automatize o processo de login em um aplicativo web, execute uma série de ações (como adicionar itens ao carrinho) e verifique os resultados esperados.
+
+### Desafio Combinado de Raspagem e Automação
+12. Desafio Multi-Módulo Crie um script abrangente que
+    - Use Requests para obter o conteúdo HTML de uma página web.
+    - Utilize BeautifulSoup para analisar o HTML e extrair dados específicos (por exemplo, detalhes de produtos de um site de comércio eletrônico).
+    - Limpe e estruture os dados usando Pandas.
+    - Salve os dados extraídos em um arquivo CSV.
+    - Use Selenium para automatizar o processo de login em uma seção diferente do site, navegue para uma página específica e faça o upload do arquivo CSV.
+
+### Automação de Garantia de Qualidade
+13. Suíte de Testes Automatizados Desenvolva uma suíte de testes automatizados usando Robot Framework e Selenium para testar várias funcionalidades (por exemplo, login, pesquisa, checkout) de um aplicativo web. Garanta que a suíte inclua configuração, desmontagem e testes baseados em dados.
+
+14. Integração Contínua Integre sua suíte de testes automatizados com um pipeline CICD (por exemplo, Jenkins, GitHub Actions) para executar testes automaticamente em alterações de código. Garanta que forneça relatórios claros sobre os resultados dos testes e falhas.
+
+### Desafio Avançado de Raspagem Web
+15. Projeto Completo de Raspagem Web Desenvolva um projeto de raspagem web completo que
+    - Extraia dados de várias páginas de um site.
+    - Lide com autenticação de login, se necessário.
+    - Trate paginação.
+    - Armazene os dados em um formato estruturado (por exemplo, banco de dados SQL).
+    - Implemente tratamento de erros e registro para gerenciar possíveis problemas durante o processo de raspagem.
+
+Esses desafios abrangem uma variedade de tarefas, desde as mais básicas até as mais avançadas, permitindo que você explore e demonstre sua proficiência com os módulos Python e ferramentas de automação mencionados.

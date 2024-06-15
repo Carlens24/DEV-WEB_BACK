@@ -1,0 +1,52 @@
+### Exemplo: Busca de Filmes no IMDb
+
+#### 1. Importar as bibliotecas necessárias:
+
+```python
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+import time
+```
+
+#### 2. Inicializar o navegador:
+
+```python
+driver_path = "/caminho/para/o/seu/driver/chromedriver"
+driver = webdriver.Chrome(executable_path=driver_path)
+```
+
+#### 3. Abrir o IMDb e pesquisar por um filme:
+
+```python
+driver.get("https://www.imdb.com")
+search_box = driver.find_element("name", "q")
+search_box.send_keys("Inception")  # Substitua com o nome do filme que deseja pesquisar
+search_box.send_keys(Keys.RETURN)
+```
+
+#### 4. Aguardar e obter informações do filme:
+
+```python
+time.sleep(3)  # Aguarda um pouco para garantir que a página tenha carregado
+result = driver.find_element("class name", "result-item")
+
+title = result.find_element("class name", "result-title").text
+year = result.find_element("class name", "result-year").text
+rating = result.find_element("class name", "result-rating").text
+
+print(f"Título: {title}")
+print(f"Ano: {year}")
+print(f"Avaliação: {rating}")
+```
+
+#### 5. Fechar o navegador:
+
+```python
+driver.quit()
+```
+
+Este script abre o site do IMDb, pesquisa por um filme (neste caso, "Inception"), espera alguns segundos para carregar os resultados e imprime o título, ano e avaliação do primeiro resultado da pesquisa.
+
+Lembre-se de substituir `"/caminho/para/o/seu/driver/chromedriver"` pelo caminho correto do seu driver.
+
+Esse é um exemplo simples, mas a automação web com Selenium pode ser estendida para tarefas mais complexas, como interagir com elementos em páginas dinâmicas, preencher formulários, ou até mesmo realizar ações em várias páginas. A prática é a chave para se tornar proficiente na automação web com Selenium, então sinta-se à vontade para experimentar e explorar diferentes funcionalidades!

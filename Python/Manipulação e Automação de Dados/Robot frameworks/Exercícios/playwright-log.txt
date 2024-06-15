@@ -1,0 +1,29 @@
+{"level":30,"time":"2024-04-25T19:24:52.957Z","pid":17956,"hostname":"PUCN001079579","msg":"Listening on 62168"}
+{"level":30,"time":"2024-04-25T19:24:53.370Z","pid":17956,"hostname":"PUCN001079579","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-04-25T19:24:53.370Z","pid":17956,"hostname":"PUCN001079579","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-04-25T19:24:53.378Z","pid":17956,"hostname":"PUCN001079579","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-04-25T19:24:53.378Z","pid":17956,"hostname":"PUCN001079579","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-04-25T19:24:53.393Z","pid":17956,"hostname":"PUCN001079579","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2024-04-25T19:24:53.959Z","pid":17956,"hostname":"PUCN001079579","msg":"Error of node method  newBrowser"}
+================= Original suppressed error =================
+browserType.launch: spawn EPERM
+=========================== logs ===========================
+<launching> c:\ProgramData\robocorp\ht\b604543_b1f3c24_1c0bc041\lib\site-packages\Browser\wrapper\node_modules\playwright-core\.local-browsers\chromium-1084\chrome-win\chrome.exe --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=c:\Users\carlens.oslin\AppData\Local\robocorp\temp\1970c2b350674dc5\playwright_chromiumdev_profile-QP5nT4 --remote-debugging-pipe --no-startup-window
+============================================================
+    at _newBrowser (c:\ProgramData\robocorp\ht\b604543_b1f3c24_1c0bc041\lib\site-packages\Browser\wrapper\index.js:9371:49)
+    at newBrowser (c:\ProgramData\robocorp\ht\b604543_b1f3c24_1c0bc041\lib\site-packages\Browser\wrapper\index.js:9732:33)
+    at PlaywrightServer.newBrowser (c:\ProgramData\robocorp\ht\b604543_b1f3c24_1c0bc041\lib\site-packages\Browser\wrapper\index.js:10006:34)
+    at handleUnary (c:\ProgramData\robocorp\ht\b604543_b1f3c24_1c0bc041\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:852:17) {
+  name: 'Error'
+}
+=============================================================
+{"level":30,"time":"2024-04-25T19:24:54.018Z","pid":17956,"hostname":"PUCN001079579","msg":"Start of node method takeScreenshot"}
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (c:\ProgramData\robocorp\ht\b604543_b1f3c24_1c0bc041\lib\site-packages\Browser\wrapper\index.js:8268:11)
+    at takeScreenshot (c:\ProgramData\robocorp\ht\b604543_b1f3c24_1c0bc041\lib\site-packages\Browser\wrapper\index.js:8307:3)
+    at PlaywrightServer.takeScreenshot (c:\ProgramData\robocorp\ht\b604543_b1f3c24_1c0bc041\lib\site-packages\Browser\wrapper\index.js:10006:34)
+    at handleUnary (c:\ProgramData\robocorp\ht\b604543_b1f3c24_1c0bc041\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:852:17)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+=============================================================
+{"level":30,"time":"2024-04-25T19:24:54.018Z","pid":17956,"hostname":"PUCN001079579","msg":"Error of node method  takeScreenshot"}
